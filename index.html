@@ -6,15 +6,9 @@
 	</head>
 
 	<body>
-		<button onclick="press()">+1</button>
-		<script>
-			function press() {
-				fetch('api.php', {
-					method: 'POST',
-				})
-					.then((response) => response.json())
-					.then((data) => console.log(data));
-			}
-		</script>
+		<p id="localCounter">Your clicks: 0</p>
+		<p id="globalCounter">All time clicks: 0</p>
+		<button id="button">+1</button>
+		<script src="main.js"></script>
 	</body>
 </html>
