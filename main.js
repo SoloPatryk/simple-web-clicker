@@ -14,3 +14,17 @@ button.addEventListener('click', () => {
 	localClickCount++;
 	localCounter.textContent = 'Your clicks: ' + localClickCount;
 });
+
+async function getGlobalClicks() {
+	const response = await fetch('api.php', {
+		method: 'GET',
+	});
+	const data = await response.json();
+	return data;
+}
+
+setInterval(() => {
+	getGlobalClicks().then((result) => {
+		console.log(result);
+	});
+}, 5000);
