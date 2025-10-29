@@ -55,7 +55,7 @@ async function updateGlobalClicks() {
 
 setInterval(updateGlobalClicks, 5000);
 
-window.addEventListener('load', async () => {
+window.addEventListener('load', () => {
 	updateGlobalClicks();
 
 	const saved = localStorage.getItem('localClickCount');
