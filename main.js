@@ -10,17 +10,28 @@ let globalClickCount = 0;
 let localClickCount = 0;
 
 function updateLocalCounterText() {
+	// Antycheat, not too great but enough for kids changing the random values in F12
+	if (globalClickCount < localClickCount) {
+		localClickCount = 0;
+	}
 	localCounter.textContent = 'Your clicks: ' + formatter.format(localClickCount);
 }
 
 button.addEventListener('click', async () => {
-	localClickCount++;
-	updateLocalCounterText();
-	localStorage.setItem('localClickCount', localClickCount.toString());
-	const response = await fetch(API, { method: 'POST' });
-	if (!response.ok) {
-		console.error('HTTP error:', response.status);
-		return;
+	try {
+		localClickCount++;
+		updateLocalCounterText();
+		localStorage.setItem('localClickCount', localClickCount.toString());
+		const response = await fetch(API, { method: 'POST' });
+		if (!response.ok) {
+			console.error('HTTP error:', response.status);
+			return;
+		}
+		const data = await response.json();
+		globalClickCount = parseInt(data);
+		updateGlobalClicks();
+	} catch (error) {
+		console.error('Failed to register click: ', error);
 	}
 });
 
@@ -36,10 +47,6 @@ async function updateGlobalClicks() {
 		const data = await response.json();
 		globalClickCount = parseInt(data);
 		globalCounter.textContent = 'All time clicks: ' + globalClickCount;
-		// Antycheat, not too great but enough for kids changing the random values in F12
-		if (globalClickCount > localClickCount) {
-			localClickCount = 0;
-		}
 	} catch (error) {
 		console.error('Fetch error:', error);
 	}
