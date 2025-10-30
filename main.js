@@ -41,15 +41,15 @@ button.addEventListener('click', async () => {
 		updateLocalCounterText();
 		localStorage.setItem('localClickCount', localClickCount.toString());
 
+		// Adding 1 to global click, instead of refetching the data from server every click
+		globalClickCount++;
+		updateGlobalCounterText();
+
 		// Updating the global count
 		const response = await fetch(api, { method: 'POST' });
 		if (!response.ok) {
 			console.error('HTTP error:', response.status);
 		}
-
-		// Adding 1 to global click, instead of refetching the data from server every click
-		globalClickCount++;
-		updateGlobalCounterText();
 	} catch (error) {
 		console.error('Failed to register click: ', error);
 	}
