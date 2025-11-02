@@ -1,0 +1,84 @@
+/* Global declarations */
+body {
+	color: #76abae;
+	background-color: #222831;
+	min-height: 95vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bolder;
+	font-size: 1.5em;
+}
+
+/* Button style */
+#button {
+	color: #76abae;
+	font-weight: 500;
+	background: #31363f;
+	width: 250px;
+	height: 250px;
+	border: none;
+	border-radius: 100%;
+	cursor: pointer;
+	font-size: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	touch-action: manipulation;
+	box-shadow: 2px 10px #31363f80;
+}
+
+/* Making button shadow smaller and moving it
+so it feels like its eing pressed down */
+#button:hover {
+	box-shadow: 1.7px 9px #31363f80;
+	transform: translateY(1px);
+}
+
+/* Same for this but moving more */
+#button:active {
+	box-shadow: 1.5px 7.5px #31363f80;
+	transform: translateY(2.5px);
+}
+
+/* Counters background, and shadow */
+#localCounter,
+#globalCounter {
+	position: fixed;
+	background-color: #31363f;
+	padding: 12px 20px;
+	border-radius: 20px;
+	box-shadow: 1px 5px #31363f80;
+}
+
+/* Aligning to top left */
+#localCounter {
+	top: -5px;
+	left: 15px;
+}
+
+/* Aligning to top right */
+#globalCounter {
+	top: -5px;
+	right: 15px;
+}
+
+/* Moving the credentials to bottom center, and changing font stuff */
+#credentials {
+	position: fixed;
+	bottom: -7px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #31363f;
+	padding: 10px 16px;
+	border-radius: 20px;
+	box-shadow: 1px 5px #31363f80;
+	text-align: center;
+	font-weight: 500;
+	font-size: 0.75em;
+}
+
+/* Making the links lighter verdigris instead of purple */
+#credentials a {
+	color: #8bc8cc;
+}
