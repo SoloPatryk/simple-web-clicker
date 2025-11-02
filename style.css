@@ -145,7 +145,8 @@ so it feels like its eing pressed down */
 	#credentials {
 		font-size: 0.5em;
 		bottom: -4px;
-		left: 85px;
+		left: auto;
+		right: -78px;
 	}
 }
 
@@ -168,11 +169,11 @@ so it feels like its eing pressed down */
 
 	/* Moving them closer to the left and right side */
 	#localCounter {
-		left: 69px;
+		left: 75px;
 	}
 
 	#globalCounter {
-		right: -78px;
+		right: -80px;
 		left: auto;
 	}
 	/* Minimal credentials, on the bottom left so it doesnt cover up button */
