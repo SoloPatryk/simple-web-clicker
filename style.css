@@ -8,6 +8,7 @@ body {
 	align-items: center;
 	font-weight: bolder;
 	font-size: 1.5em;
+	text-align: center;
 }
 
 /* Button style */
@@ -73,7 +74,6 @@ so it feels like its eing pressed down */
 	padding: 10px 16px;
 	border-radius: 20px;
 	box-shadow: 1px 5px #31363f80;
-	text-align: center;
 	font-weight: 500;
 	font-size: 0.75em;
 }
@@ -81,4 +81,117 @@ so it feels like its eing pressed down */
 /* Making the links lighter verdigris instead of purple */
 #credentials a {
 	color: #8bc8cc;
+}
+/* Mobile changes so the text doesnt overlap */
+@media (max-width: 700px) {
+	/* Slighty smaller button */
+	#button {
+		width: 200px;
+		height: 200px;
+		font-size: 70px;
+	}
+
+	/* Centering both to the middle of screen, and making the text smaller */
+	#localCounter,
+	#globalCounter {
+		left: 50%;
+		width: max-content;
+		transform: translateX(-50%);
+		font-size: 1em;
+	}
+
+	/* Making the Counters on top of each other */
+	#localCounter {
+		top: 55px;
+	}
+
+	#globalCounter {
+		top: -15px;
+	}
+
+	/* Smaller credentials */
+	#credentials {
+		font-size: 0.7em;
+		width: max-content;
+		bottom: -5px;
+	}
+}
+
+/* For mobile phones rotated sideways */
+@media (max-height: 500px) {
+	/* Slighty smaller button */
+	#button {
+		width: 200px;
+		height: 200px;
+		font-size: 70px;
+	}
+	/* Making the text smaller, and a little closer to the edges of screen */
+	#localCounter,
+	#globalCounter {
+		font-size: 0.9em;
+		top: -18px;
+	}
+
+	/* Moving them closer to the left and right side */
+	#localCounter {
+		left: 4px;
+	}
+
+	#globalCounter {
+		right: 4px;
+	}
+
+	/* Smaller credentials, on the bottom left so it doesnt cover up button */
+	#credentials {
+		font-size: 0.5em;
+		bottom: -4px;
+		left: 85px;
+	}
+}
+
+/* For very small devices */
+@media (max-height: 500px) and (max-width: 700px) {
+	/* Smaller button */
+	#button {
+		width: 150px;
+		height: 150px;
+		font-size: 55px;
+	}
+
+	/* Making the text smaller, and a little closer to the edges of screen */
+	#localCounter,
+	#globalCounter {
+		font-size: 0.5em;
+		top: -9px;
+		padding: 6px 12px;
+	}
+
+	/* Moving them closer to the left and right side */
+	#localCounter {
+		left: 69px;
+	}
+
+	#globalCounter {
+		right: -78px;
+		left: auto;
+	}
+	/* Minimal credentials, on the bottom left so it doesnt cover up button */
+	#credentials {
+		font-size: 0.4em;
+		bottom: -2px;
+		left: auto;
+		right: -56px;
+		width: max-content;
+		padding: 6px 8px;
+		border-radius: 10px;
+	}
+}
+
+/* For nano devices (idk if you can even run this website on those devices but why not add support >:3 */
+@media (max-height: 250px) and (max-width: 400px) {
+	#button {
+		width: 100px;
+		height: 100px;
+		font-size: 40px;
+	}
 }
