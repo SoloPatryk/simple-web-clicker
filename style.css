@@ -27,6 +27,7 @@ body {
 	align-items: center;
 	touch-action: manipulation;
 	box-shadow: 2px 10px #31363f80;
+	transition: all 0.1s ease;
 }
 
 /* Making button shadow smaller and moving it
