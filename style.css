@@ -35,20 +35,20 @@ body {
 	justify-content: center;
 	align-items: center;
 	touch-action: manipulation;
-	box-shadow: 2px 10px var(--shadow-secondary-background);
+	box-shadow: 2px 10px var(--secondary-background-shadow);
 	transition: all 0.1s ease;
 }
 
 /* Making button shadow smaller and moving it
 so it feels like its eing pressed down */
 #button:hover {
-	box-shadow: 1.7px 9px var(--shadow-secondary-background);
+	box-shadow: 1.7px 9px var(--secondary-background-shadow);
 	transform: translateY(1px);
 }
 
 /* Same for this but moving more */
 #button:active {
-	box-shadow: 1.5px 7.5px var(--shadow-secondary-background);
+	box-shadow: 1.5px 7.5px var(--secondary-background-shadow);
 	transform: translateY(2.5px);
 }
 
@@ -59,7 +59,7 @@ so it feels like its eing pressed down */
 	background-color: var(--secondary-background);
 	padding: 12px 20px;
 	border-radius: 20px;
-	box-shadow: 1px 5px var(--shadow-secondary-background);
+	box-shadow: 1px 5px var(--secondary-background-shadow);
 }
 
 /* Aligning to top left */
@@ -83,7 +83,7 @@ so it feels like its eing pressed down */
 	background-color: var(--secondary-background);
 	padding: 10px 16px;
 	border-radius: 20px;
-	box-shadow: 1px 5px var(--shadow-secondary-background);
+	box-shadow: 1px 5px var(--secondary-background-shadow);
 	font-weight: 500;
 	font-size: 0.75em;
 }
