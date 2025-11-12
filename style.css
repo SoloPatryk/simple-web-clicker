@@ -156,7 +156,8 @@ so it feels like its eing pressed down */
 		font-size: 0.5em;
 		bottom: -4px;
 		left: auto;
-		right: -78px;
+		/* right: -78px; */
+		right: -63px;
 	}
 }
 
@@ -179,19 +180,23 @@ so it feels like its eing pressed down */
 
 	/* Moving them closer to the left and right side */
 	#localCounter {
-		left: 75px;
+		/* left: 75px; */
+		left: 50px;
 	}
 
 	#globalCounter {
-		right: -80px;
+		/* right: -80px; */
+		right: -52px;
 		left: auto;
 	}
+
 	/* Minimal credentials, on the bottom left so it doesnt cover up button */
 	#credentials {
 		font-size: 0.4em;
 		bottom: -2px;
 		left: auto;
-		right: -56px;
+		/* right: -56px; */
+		right: -44px;
 		width: max-content;
 		padding: 6px 8px;
 		border-radius: 10px;
