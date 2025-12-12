@@ -155,9 +155,11 @@ so it feels like its eing pressed down */
 	#credentials {
 		font-size: 0.5em;
 		bottom: -4px;
+		transform: translateX(-2%);
 		left: auto;
 		/* right: -78px; */
-		right: -63px;
+		/* right: -63px; */
+		right: 0;
 	}
 }
 
@@ -181,12 +183,14 @@ so it feels like its eing pressed down */
 	/* Moving them closer to the left and right side */
 	#localCounter {
 		/* left: 75px; */
-		left: 50px;
+		transform: translateX(-1%);
+		/* left: 50px; */
 	}
 
 	#globalCounter {
 		/* right: -80px; */
-		right: -52px;
+		transform: translateX(-2%);
+		right: 0;
 		left: auto;
 	}
 
@@ -196,7 +200,9 @@ so it feels like its eing pressed down */
 		bottom: -2px;
 		left: auto;
 		/* right: -56px; */
-		right: -44px;
+		/* right: -44px; */
+		right: 0;
+		transform: translateX(-3%);
 		width: max-content;
 		padding: 6px 8px;
 		border-radius: 10px;
